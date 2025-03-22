@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "ESNext",
+        "target": "ES6",
+        "strict": true,
+        "jsx": "react-jsx",
+        "moduleResolution": "Node",
+        "esModuleInterop": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+}
