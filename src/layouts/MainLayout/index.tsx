@@ -1,12 +1,7 @@
-import { ReactNode } from 'react';
-
+import { ILayoutProps } from '../interfaces';
 import { Container } from './styles';
 
-interface MainLayoutProps {
-    children: ReactNode;
-}
-
-const MainLayout = ({ children }: MainLayoutProps) => (
+const MainLayout = ({ children }: ILayoutProps) => (
     <Container>{children}</Container>
 );
 

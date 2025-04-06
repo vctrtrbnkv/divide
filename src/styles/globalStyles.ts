@@ -12,7 +12,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: serif, sans-serif;
+        font-family: Inter, sans-serif;
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
     }
 `;
 

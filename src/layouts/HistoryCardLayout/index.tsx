@@ -1,8 +1,8 @@
 import { ILayoutProps } from '../interfaces';
 import { Container } from './styles';
 
-const MiniLayout = ({ children }: ILayoutProps) => (
+const HistoryCardLayout = ({ children }: ILayoutProps) => (
     <Container>{children}</Container>
 );
 
-export default MiniLayout;
+export default HistoryCardLayout;
