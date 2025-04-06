@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
     parser: '@typescript-eslint/parser',
     extends: [
@@ -24,10 +25,18 @@ module.exports = {
         'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
         'simple-import-sort/imports': 'error',
         'simple-import-sort/exports': 'error',
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            { argsIgnorePattern: '^_' },
+        ],
+        '@typescript-eslint/no-require-imports': 'off',
     },
     settings: {
         react: {
             version: 'detect',
         },
+    },
+    env: {
+        node: true,
     },
 };

@@ -1,7 +1,16 @@
-import { Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Paths } from '../../utils/constants';
 
-const RootPage = () => <Navigate to={Paths.Main} />;
+const RootPage = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        navigate(Paths.Main);
+    }, [navigate]);
+
+    return null;
+};
 
 export default RootPage;

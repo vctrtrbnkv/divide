@@ -1,0 +1,58 @@
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-styled-components"
+    ],
+    "plugins": ["stylelint-order"],
+    "overrides": [
+        {
+            "files": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
+            "customSyntax": "postcss-jsx",
+            "rules": {
+                "no-missing-end-of-source-newline": null
+            }
+        }
+    ],
+    "rules": {
+        "order/properties-order": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "z-index",
+
+            "display",
+            "flex-direction",
+            "flex-wrap",
+            "justify-content",
+            "align-items",
+            "align-content",
+            "gap",
+
+            "width",
+            "height",
+            "box-sizing",
+            "margin",
+            "padding",
+            "border",
+
+            "font",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "line-height",
+            "color",
+            "text-align",
+
+            "background",
+            "background-color",
+            "background-image",
+            "box-shadow",
+            "opacity",
+
+            "transition",
+            "animation"
+        ]
+    }
+}
