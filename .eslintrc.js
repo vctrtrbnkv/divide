@@ -30,6 +30,7 @@ module.exports = {
             { argsIgnorePattern: '^_' },
         ],
         '@typescript-eslint/no-require-imports': 'off',
+        'react/prop-types': 'off',
     },
     settings: {
         react: {

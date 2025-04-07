@@ -1,14 +1,8 @@
-import { ReactNode } from 'react';
-
+import { IButtonProps } from '../interfaces';
 import { PrimaryButton } from './styles';
 
-interface ButtonProps {
-    children: ReactNode;
-    icon?: ReactNode;
-}
-
-export const Button = ({ icon, children }: ButtonProps) => (
-    <PrimaryButton>
+export const Button = ({ icon, children, onClick, disabled }: IButtonProps) => (
+    <PrimaryButton onClick={onClick} disabled={disabled}>
         {icon}
         {children}
     </PrimaryButton>
