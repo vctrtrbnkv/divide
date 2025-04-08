@@ -27,3 +27,15 @@ export interface IButtonProps {
     onClick?: (e: React.MouseEvent) => void;
     disabled?: boolean;
 }
+
+import React from 'react';
+
+export interface IFilePickerProps {
+    accept?: string;
+    capture?: 'user' | 'environment';
+    onFileSelect: (file: File | File[]) => void;
+    multiple?: boolean;
+}
+
+// Создаем тип для ссылки на input элемент
+export type FilePickerRef = HTMLInputElement;

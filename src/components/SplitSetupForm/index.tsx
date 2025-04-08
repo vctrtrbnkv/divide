@@ -31,7 +31,7 @@ const SplitSetupField = () => {
                 <h2>Способ деления</h2>
                 <StyledFieldset>
                     <StyledLegend>
-                        Выберете подходящий метод деления
+                        Выберите подходящий метод деления
                     </StyledLegend>
 
                     <StyledLabel htmlFor="split-equal">

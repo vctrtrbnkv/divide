@@ -1,14 +1,10 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import HistoryCard from '../../components/HistoryCard';
+import UploadFileInput from '../../components/UploadFileInput';
 import MainLayout from '../../layouts/MainLayout';
 import MiniLayout from '../../layouts/MiniLayout';
-import { Button } from '../../ui/button';
-import Camera from '../../ui/Icons/Camera';
-import Download from '../../ui/Icons/Download';
 import { apiFetch } from '../../utils/api';
-import { Paths } from '../../utils/constants';
 
 type History = {
     id: number;
@@ -26,19 +22,11 @@ const MainPage = () => {
         });
     }, []);
 
-    const navigate = useNavigate();
-
     return (
         <MainLayout>
             <MiniLayout>
                 <h2>Разделить счет</h2>
-                <Button
-                    icon={<Camera />}
-                    onClick={() => navigate(Paths.SplitSetup)}
-                >
-                    Сфтографировать чек
-                </Button>
-                <Button icon={<Download />}>Загрузить чек</Button>
+                <UploadFileInput />
             </MiniLayout>
             <MiniLayout>
                 <h2>История</h2>
