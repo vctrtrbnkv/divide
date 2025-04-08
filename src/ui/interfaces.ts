@@ -37,5 +37,4 @@ export interface IFilePickerProps {
     multiple?: boolean;
 }
 
-// Создаем тип для ссылки на input элемент
 export type FilePickerRef = HTMLInputElement;

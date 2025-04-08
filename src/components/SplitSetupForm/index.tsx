@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import MiniLayout from '../../layouts/MiniLayout';
-import { PrimaryButton } from '../../ui/button/styles';
+import { Button } from '../../ui/button';
 import NumberInput from '../../ui/inputs/NumberInput';
 import RadioInput from '../../ui/inputs/RadioInput';
 import { StyledFieldset, StyledLabel, StyledLegend } from './styles';
@@ -85,11 +85,11 @@ const SplitSetupField = () => {
                     pattern="[0-9]*"
                 />
             </MiniLayout>
-            <PrimaryButton
+            <Button
                 disabled={Number(form.value) < 1 || Number(form.value) > 30}
             >
                 Продолжить
-            </PrimaryButton>
+            </Button>
         </>
     );
 };

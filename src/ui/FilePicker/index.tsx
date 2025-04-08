@@ -1,13 +1,12 @@
 import React, { forwardRef, useImperativeHandle, useRef } from 'react';
 
-import { FilePickerRef, IFilePickerProps } from '../interfaces'; // Подключаем интерфейсы
+import { FilePickerRef, IFilePickerProps } from '../interfaces';
 import { InvisibleInput } from './styles';
 
 const FilePicker = forwardRef<FilePickerRef, IFilePickerProps>(
     ({ accept = '*/*', capture, onFileSelect, multiple = false }, ref) => {
         const inputRef = useRef<HTMLInputElement>(null);
 
-        // Позволяет передать ref наружу, чтобы родительский компонент мог управлять input
         useImperativeHandle(ref, () => inputRef.current!);
 
         const trigger = () => {
@@ -42,6 +41,6 @@ const FilePicker = forwardRef<FilePickerRef, IFilePickerProps>(
     }
 );
 
-FilePicker.displayName = 'FilePicker'; // Для удобства дебага
+FilePicker.displayName = 'FilePicker';
 
 export default FilePicker;

@@ -71,8 +71,6 @@ const UploadFileInput = () => {
                     Загрузить чек
                 </Button>
             )}
-
-            {!deviceType && <p>🔍 Определяем устройство...</p>}
         </>
     );
 };
