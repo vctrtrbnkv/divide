@@ -1,26 +1,13 @@
-import { useEffect, useState } from 'react';
-
 import HistoryCard from '../../components/HistoryCard';
 import UploadFileInput from '../../components/UploadFileInput';
 import MainLayout from '../../layouts/MainLayout';
 import MiniLayout from '../../layouts/MiniLayout';
-import { apiFetch } from '../../utils/api';
-
-type History = {
-    id: number;
-    date: string;
-    restaurant: string;
-    total_amount: number;
-}[];
+import { useGetReceiptsQuery } from '../../redux/receiptsApi';
 
 const MainPage = () => {
-    const [history, setHistory] = useState<History>([]);
+    const { data: receipts, isLoading } = useGetReceiptsQuery();
 
-    useEffect(() => {
-        apiFetch('history').then((response) => {
-            setHistory(response);
-        });
-    }, []);
+    if (isLoading) return <p>Загрузка...</p>;
 
     return (
         <MainLayout>
@@ -30,21 +17,14 @@ const MainPage = () => {
             </MiniLayout>
             <MiniLayout>
                 <h2>История</h2>
-                {history.map(
-                    ({
-                        id,
-                        date,
-                        restaurant: restaurantName,
-                        total_amount: totalAmount,
-                    }) => (
-                        <HistoryCard
-                            key={id}
-                            date={date}
-                            restaurantName={restaurantName}
-                            totalAmount={totalAmount}
-                        />
-                    )
-                )}
+                {receipts?.map((receipt) => (
+                    <HistoryCard
+                        key={receipt.id}
+                        date={receipt.date}
+                        restaurantName={receipt.companyName}
+                        totalAmount={receipt.totalAmount}
+                    />
+                ))}
             </MiniLayout>
         </MainLayout>
     );
