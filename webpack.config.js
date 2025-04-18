@@ -28,7 +28,7 @@ module.exports = {
         }),
     ],
     devServer: {
-        static: './dist',
+        static: path.resolve(__dirname, 'dist'),
         hot: true,
         port: 3001,
         historyApiFallback: true,

@@ -19,3 +19,9 @@ export const StyledRadio = styled.input`
     width: 27px;
     height: 27px;
 `;
+
+export const StyledCheckbox = styled.input`
+    accent-color: #00920c;
+    width: 21px;
+    height: 21px;
+`;

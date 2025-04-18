@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import { IReceipt } from './inerfaces';
+import { IReceipt, TReceiptUpdate } from './inerfaces';
 
 export const receiptsApi = createApi({
     reducerPath: 'receiptsApi',
@@ -15,11 +15,14 @@ export const receiptsApi = createApi({
             query: (id) => `receipts/${id}`,
             providesTags: (result, error, id) => [{ type: 'Receipts', id }],
         }),
-        uploadReceipt: builder.mutation<void, FormData>({
-            query: (formData) => ({
+        uploadReceipt: builder.mutation<
+            { id: number },
+            Pick<IReceipt, 'totalAmount'>
+        >({
+            query: (receipt) => ({
                 url: 'receipts',
                 method: 'POST',
-                body: formData,
+                body: receipt,
             }),
             invalidatesTags: ['Receipts'],
         }),
@@ -27,6 +30,14 @@ export const receiptsApi = createApi({
             query: (id) => ({
                 url: `receipts/${id}`,
                 method: 'DELETE',
+            }),
+            invalidatesTags: ['Receipts'],
+        }),
+        updateReceipt: builder.mutation<void, TReceiptUpdate>({
+            query: ({ id, ...patch }) => ({
+                url: `receipts/${id}`,
+                method: 'PATCH',
+                body: patch,
             }),
             invalidatesTags: ['Receipts'],
         }),
@@ -38,4 +49,5 @@ export const {
     useGetReceiptByIdQuery,
     useUploadReceiptMutation,
     useDeleteReceiptMutation,
+    useUpdateReceiptMutation,
 } = receiptsApi;

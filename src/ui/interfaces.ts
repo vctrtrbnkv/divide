@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import React from 'react';
 
 export interface IInputBaseProps {
     value: string;
@@ -21,14 +22,21 @@ export interface IRadioInputProps extends IInputBaseProps {
     checked?: boolean;
 }
 
+export interface ICheckboxInputProps {
+    id?: string;
+    name?: string;
+    value?: string;
+    checked: boolean;
+    onChange: (checked: boolean) => void;
+}
+
 export interface IButtonProps {
     children: ReactNode;
     icon?: ReactNode;
     onClick?: (e: React.MouseEvent) => void;
     disabled?: boolean;
+    variant?: 'primary' | 'secondary';
 }
-
-import React from 'react';
 
 export interface IFilePickerProps {
     accept?: string;

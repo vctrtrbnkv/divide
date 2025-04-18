@@ -17,3 +17,9 @@ export const StyledLabel = styled.label`
     gap: 16px;
     font-size: 20px;
 `;
+
+export const StyledForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+`;
