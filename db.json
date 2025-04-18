@@ -1,0 +1,545 @@
+{
+  "receipts": [
+    {
+      "id": 1,
+      "imageUrl": "https://example.com/receipt_001.jpg",
+      "date": "01.04.2025",
+      "companyName": "Кафе Лотос",
+      "totalAmount": 1520,
+      "currency": "RUB",
+      "tip": 150,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Борщ",
+          "quantity": 2,
+          "unitPrice": 250,
+          "totalPrice": 500
+        },
+        {
+          "id": 2,
+          "name": "Чай с лимоном",
+          "quantity": 1,
+          "unitPrice": 100,
+          "totalPrice": 200
+        },
+        {
+          "id": 3,
+          "name": "Куриное филе",
+          "quantity": 1,
+          "unitPrice": 410,
+          "totalPrice": 820
+        }
+      ],
+      "guests": [
+        {
+          "name": "Анна",
+          "phone": "+79261234567",
+          "selectedItems": [
+            "Борщ",
+            "Чай с лимоном"
+          ],
+          "customSplit": false,
+          "amountOwed": 350
+        },
+        {
+          "name": "Игорь",
+          "phone": "+79269876543",
+          "selectedItems": [
+            "Куриное филе"
+          ],
+          "customSplit": false,
+          "amountOwed": 820
+        },
+        {
+          "name": "Катя",
+          "phone": "+79031234567",
+          "selectedItems": [
+            "Борщ"
+          ],
+          "customSplit": true,
+          "amountOwed": 350
+        }
+      ],
+      "splitMode": "custom"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://example.com/receipt_002.jpg",
+      "date": "02.04.2025",
+      "companyName": "Ресторан Италия",
+      "totalAmount": 3240,
+      "currency": "RUB",
+      "tip": 300,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Пицца Маргарита",
+          "quantity": 2,
+          "unitPrice": 600,
+          "totalPrice": 1200
+        },
+        {
+          "id": 2,
+          "name": "Паста Карбонара",
+          "quantity": 2,
+          "unitPrice": 700,
+          "totalPrice": 1400
+        },
+        {
+          "id": 3,
+          "name": "Капучино",
+          "quantity": 2,
+          "unitPrice": 320,
+          "totalPrice": 640
+        }
+      ],
+      "guests": [
+        {
+          "name": "Лена",
+          "phone": "+79260001111",
+          "selectedItems": [
+            0
+          ],
+          "customSplit": false,
+          "amountOwed": 1200
+        },
+        {
+          "name": "Артём",
+          "phone": "+79261112222",
+          "selectedItems": [
+            1,
+            2
+          ],
+          "customSplit": false,
+          "amountOwed": 2040
+        }
+      ],
+      "splitMode": "custom",
+      "createdBy": {
+        "userId": "user_002",
+        "name": "Артём"
+      }
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://example.com/receipt_003.jpg",
+      "date": "03.04.2025",
+      "companyName": "Шаурма №1",
+      "totalAmount": 450,
+      "currency": "RUB",
+      "tip": 0,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Шаурма",
+          "quantity": 3,
+          "unitPrice": 150,
+          "totalPrice": 450
+        }
+      ],
+      "guests": [
+        {
+          "name": "Миша",
+          "phone": "+79263334444",
+          "selectedItems": [
+            0
+          ],
+          "customSplit": false,
+          "amountOwed": 150
+        },
+        {
+          "name": "Никита",
+          "phone": "+79265556666",
+          "selectedItems": [
+            0
+          ],
+          "customSplit": false,
+          "amountOwed": 150
+        },
+        {
+          "name": "Таня",
+          "phone": "+79267778888",
+          "selectedItems": [
+            0
+          ],
+          "customSplit": false,
+          "amountOwed": 150
+        }
+      ],
+      "splitMode": "equal",
+      "createdBy": {
+        "userId": "user_003",
+        "name": "Миша"
+      }
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://example.com/receipt_004.jpg",
+      "date": "04.04.2025",
+      "companyName": "Суши-Мастер",
+      "totalAmount": 1820,
+      "currency": "RUB",
+      "tip": 200,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Ролл Филадельфия",
+          "quantity": 2,
+          "unitPrice": 540,
+          "totalPrice": 1080
+        },
+        {
+          "id": 2,
+          "name": "Мисо суп",
+          "quantity": 2,
+          "unitPrice": 120,
+          "totalPrice": 240
+        },
+        {
+          "id": 3,
+          "name": "Зелёный чай",
+          "quantity": 2,
+          "unitPrice": 150,
+          "totalPrice": 300
+        }
+      ],
+      "guests": [
+        {
+          "name": "Женя",
+          "phone": "+79005550000",
+          "selectedItems": [
+            0
+          ],
+          "customSplit": false,
+          "amountOwed": 1080
+        },
+        {
+          "name": "Соня",
+          "phone": "+79006660000",
+          "selectedItems": [
+            1,
+            2
+          ],
+          "customSplit": false,
+          "amountOwed": 740
+        }
+      ],
+      "splitMode": "custom",
+      "createdBy": {
+        "userId": "user_004",
+        "name": "Соня"
+      }
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://example.com/receipt_005.jpg",
+      "date": "05.04.2025",
+      "companyName": "Кофейня Бодрое Утро",
+      "totalAmount": 680,
+      "currency": "RUB",
+      "tip": 50,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Латте",
+          "quantity": 2,
+          "unitPrice": 180,
+          "totalPrice": 360
+        },
+        {
+          "id": 2,
+          "name": "Круассан",
+          "quantity": 2,
+          "unitPrice": 140,
+          "totalPrice": 280
+        }
+      ],
+      "guests": [
+        {
+          "name": "Оля",
+          "phone": "+79111112222",
+          "selectedItems": [
+            0
+          ],
+          "customSplit": false,
+          "amountOwed": 360
+        },
+        {
+          "name": "Вася",
+          "phone": "+79112223333",
+          "selectedItems": [
+            1
+          ],
+          "customSplit": false,
+          "amountOwed": 320
+        }
+      ],
+      "splitMode": "custom",
+      "createdBy": {
+        "userId": "user_005",
+        "name": "Оля"
+      }
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://example.com/receipt_006.jpg",
+      "date": "06.04.2025",
+      "companyName": "Грузинская кухня",
+      "totalAmount": 2450,
+      "currency": "RUB",
+      "tip": 150,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Хачапури по-аджарски",
+          "quantity": 2,
+          "unitPrice": 500,
+          "totalPrice": 1000
+        },
+        {
+          "id": 1,
+          "name": "Шашлык",
+          "quantity": 2,
+          "unitPrice": 700,
+          "totalPrice": 1400
+        },
+        {
+          "id": 1,
+          "name": "Тархун",
+          "quantity": 1,
+          "unitPrice": 50,
+          "totalPrice": 50
+        }
+      ],
+      "guests": [
+        {
+          "name": "Коля",
+          "phone": "+79007774444",
+          "selectedItems": [
+            0,
+            2
+          ],
+          "customSplit": false,
+          "amountOwed": 1050
+        },
+        {
+          "name": "Рита",
+          "phone": "+79008885555",
+          "selectedItems": [
+            1
+          ],
+          "customSplit": false,
+          "amountOwed": 1400
+        }
+      ],
+      "splitMode": "custom",
+      "createdBy": {
+        "userId": "user_006",
+        "name": "Коля"
+      }
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://example.com/receipt_006.jpg",
+      "date": "06.04.2025",
+      "companyName": "Грузинская кухня2",
+      "totalAmount": 2450,
+      "currency": "RUB",
+      "tip": 150,
+      "recognized": true,
+      "items": [
+        {
+          "id": 1,
+          "name": "Хачапури по-аджарски",
+          "quantity": 2,
+          "unitPrice": 500,
+          "totalPrice": 1000
+        },
+        {
+          "id": 2,
+          "name": "Шашлык",
+          "quantity": 2,
+          "unitPrice": 700,
+          "totalPrice": 1400
+        },
+        {
+          "id": 3,
+          "name": "Тархун",
+          "quantity": 1,
+          "unitPrice": 50,
+          "totalPrice": 50
+        }
+      ],
+      "guests": [],
+      "splitMode": "personal",
+      "createdBy": {
+        "userId": "user_006",
+        "name": "Коля"
+      }
+    },
+    {
+      "totalAmount": 6597,
+      "id": 8,
+      "guests": [
+        {
+          "id": 1,
+          "name": "Гость 1",
+          "amountOwed": 3298.5
+        },
+        {
+          "id": 2,
+          "name": "Гость 2",
+          "amountOwed": 3298.5
+        }
+      ]
+    },
+    {
+      "totalAmount": 314,
+      "id": 9,
+      "guests": [
+        {
+          "id": 1,
+          "name": "Гость 1",
+          "amountOwed": 62.8
+        },
+        {
+          "id": 2,
+          "name": "Гость 2",
+          "amountOwed": 62.8
+        },
+        {
+          "id": 3,
+          "name": "Гость 3",
+          "amountOwed": 62.8
+        },
+        {
+          "id": 4,
+          "name": "Гость 4",
+          "amountOwed": 62.8
+        },
+        {
+          "id": 5,
+          "name": "Гость 5",
+          "amountOwed": 62.8
+        }
+      ]
+    },
+    {
+      "totalAmount": 927,
+      "id": 10,
+      "guests": [
+        {
+          "id": 1,
+          "name": "Гость 1",
+          "amountOwed": 463.5
+        },
+        {
+          "id": 2,
+          "name": "Гость 2",
+          "amountOwed": 463.5
+        }
+      ]
+    },
+    {
+      "totalAmount": 3669,
+      "id": 11,
+      "guests": []
+    },
+    {
+      "totalAmount": 6783,
+      "id": 12,
+      "guests": []
+    },
+    {
+      "totalAmount": 6114,
+      "items": [
+        {
+          "id": 1,
+          "name": "Борщ",
+          "quantity": 2,
+          "unitPrice": 250,
+          "totalPrice": 500
+        },
+        {
+          "id": 2,
+          "name": "Чай с лимоном",
+          "quantity": 1,
+          "unitPrice": 100,
+          "totalPrice": 200
+        },
+        {
+          "id": 3,
+          "name": "Куриное филе",
+          "quantity": 1,
+          "unitPrice": 410,
+          "totalPrice": 820
+        }
+      ],
+      "id": 13,
+      "guests": []
+    },
+    {
+      "totalAmount": 2293,
+      "items": [
+        {
+          "id": 1,
+          "name": "Борщ",
+          "quantity": 2,
+          "unitPrice": 250,
+          "totalPrice": 500
+        },
+        {
+          "id": 2,
+          "name": "Чай с лимоном",
+          "quantity": 1,
+          "unitPrice": 100,
+          "totalPrice": 200
+        },
+        {
+          "id": 3,
+          "name": "Куриное филе",
+          "quantity": 1,
+          "unitPrice": 410,
+          "totalPrice": 820
+        }
+      ],
+      "id": 14,
+      "guests": []
+    },
+    {
+      "totalAmount": 5352,
+      "items": [
+        {
+          "id": 1,
+          "name": "Борщ",
+          "quantity": 2,
+          "unitPrice": 250,
+          "totalPrice": 500
+        },
+        {
+          "id": 2,
+          "name": "Чай с лимоном",
+          "quantity": 1,
+          "unitPrice": 100,
+          "totalPrice": 200
+        },
+        {
+          "id": 3,
+          "name": "Куриное филе",
+          "quantity": 1,
+          "unitPrice": 410,
+          "totalPrice": 820
+        }
+      ],
+      "id": 15,
+      "guests": []
+    }
+  ]
+}
